@@ -70,12 +70,12 @@ With auto wiring this will work out of the box. If you're not using auto wiring 
 
 ```
 
-[ico-version]: https://poser.pugx.org/setono/gls-webservice-bundle/v/stable
-[ico-unstable-version]: https://poser.pugx.org/setono/gls-webservice-bundle/v/unstable
-[ico-license]: https://poser.pugx.org/setono/gls-webservice-bundle/license
-[ico-travis]: https://travis-ci.com/Setono/GlsWebserviceBundle.svg?branch=master
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/GlsWebserviceBundle.svg?style=flat-square
+[ico-version]: https://poser.pugx.org/setono/post-nord-bundle/v/stable
+[ico-unstable-version]: https://poser.pugx.org/setono/post-nord-bundle/v/unstable
+[ico-license]: https://poser.pugx.org/setono/post-nord-bundle/license
+[ico-travis]: https://travis-ci.com/Setono/PostNordBundle.svg?branch=master
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/PostNordBundle.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/setono/gls-webservice-bundle
-[link-travis]: https://travis-ci.com/Setono/GlsWebserviceBundle
-[link-code-quality]: https://scrutinizer-ci.com/g/Setono/GlsWebserviceBundle
+[link-packagist]: https://packagist.org/packages/setono/post-nord-bundle
+[link-travis]: https://travis-ci.com/Setono/PostNordBundle
+[link-code-quality]: https://scrutinizer-ci.com/g/Setono/PostNordBundle
