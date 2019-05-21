@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Setono\PostNordBundle;
 
 use Setono\PostNordBundle\DependencyInjection\Compiler\RegisterFactoriesPass;
+use Setono\PostNordBundle\DependencyInjection\Compiler\RegisterHttpClientPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -15,5 +16,6 @@ final class SetonoPostNordBundle extends Bundle
         parent::build($container);
 
         $container->addCompilerPass(new RegisterFactoriesPass());
+        $container->addCompilerPass(new RegisterHttpClientPass());
     }
 }
