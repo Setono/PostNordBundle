@@ -16,5 +16,4 @@ final class SetonoPostNordBundle extends Bundle
 
         $container->addCompilerPass(new RegisterFactoriesPass());
     }
-
 }

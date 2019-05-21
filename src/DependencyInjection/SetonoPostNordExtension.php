@@ -24,11 +24,15 @@ final class SetonoPostNordExtension extends Extension
         $container->setParameter('setono_post_nord.api_key', $config['api_key']);
         $container->setParameter('setono_post_nord.base_url', $config['base_url']);
 
-        if(isset($config['request_factory'])) {
+        if (isset($config['http_client'])) {
+            $container->setParameter('setono_post_nord.http_client', $config['http_client']);
+        }
+
+        if (isset($config['request_factory'])) {
             $container->setParameter('setono_post_nord.request_factory', $config['request_factory']);
         }
 
-        if(isset($config['stream_factory'])) {
+        if (isset($config['stream_factory'])) {
             $container->setParameter('setono_post_nord.stream_factory', $config['stream_factory']);
         }
 

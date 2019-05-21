@@ -5,12 +5,13 @@
     "keywords": [
         "symfony",
         "setono",
-        "gls"
+        "postnord",
+        "post nord"
     ],
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "setono/post-nord-php-sdk": "dev-master",
+        "setono/post-nord-php-sdk": "^1.0",
         "symfony/config": "^4.0",
         "symfony/dependency-injection": "^4.0",
         "symfony/framework-bundle": "^4.0"

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Setono\PostNordBundle\DependencyInjection\Compiler;
 
-use InvalidArgumentException;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
@@ -18,7 +17,7 @@ final class RegisterFactoriesPass implements CompilerPassInterface
 
     public function process(ContainerBuilder $container): void
     {
-        if(class_exists(Psr17Factory::class)) {
+        if (class_exists(Psr17Factory::class)) {
             // this service is used later if the Psr17Factory exists. Else it will be automatically removed by Symfony
             $container->register(self::PSR17_FACTORY_SERVICE_ID, Psr17Factory::class);
         }
@@ -29,20 +28,18 @@ final class RegisterFactoriesPass implements CompilerPassInterface
 
     private function registerFactory(ContainerBuilder $container, string $parameter, string $service, string $factoryInterface): void
     {
-        if($container->hasParameter($parameter)) {
-            if(!$container->has($container->getParameter($parameter))) {
+        if ($container->hasParameter($parameter)) {
+            if (!$container->has($container->getParameter($parameter))) {
                 throw new ServiceNotFoundException($container->getParameter($parameter));
             }
 
             $container->setAlias($service, $container->getParameter($parameter));
-        } elseif($container->has($factoryInterface)) {
+        } elseif ($container->has($factoryInterface)) {
             $container->setAlias($service, $factoryInterface);
         } elseif ($container->has('nyholm.psr7.psr17_factory')) {
             $container->setAlias($service, 'nyholm.psr7.psr17_factory');
         } elseif (class_exists(Psr17Factory::class)) {
             $container->setAlias($service, self::PSR17_FACTORY_SERVICE_ID);
-        } else {
-            throw new InvalidArgumentException('You need to set the parameter setono_post_nord.request_factory. You can also run composer req nyholm/psr7 and it will work automatically.');
         }
     }
 }
