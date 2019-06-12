@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Setono\PostNordBundle\DependencyInjection\Compiler;
 
+use Exception;
 use Buzz\Client\BuzzClientInterface;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -22,7 +23,10 @@ final class RegisterHttpClientPass implements CompilerPassInterface
             }
 
             $container->setAlias(self::HTTP_CLIENT_SERVICE_ID, $container->getParameter(self::HTTP_CLIENT_PARAMETER));
-        } elseif ($container->has(BuzzClientInterface::class)) {
+        } else {
+            if (!$container->has(BuzzClientInterface::class)) {
+                throw new Exception('You should specify setono_post_nord.http_client or define Buzz\Client\BuzzClientInterface service to be used by default');
+            }
             $container->setAlias(self::HTTP_CLIENT_SERVICE_ID, BuzzClientInterface::class);
         }
     }
