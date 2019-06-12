@@ -25,7 +25,7 @@ final class RegisterHttpClientPass implements CompilerPassInterface
             $container->setAlias(self::HTTP_CLIENT_SERVICE_ID, $container->getParameter(self::HTTP_CLIENT_PARAMETER));
         } else {
             if (!$container->has(BuzzClientInterface::class)) {
-                throw new Exception('You should specify setono_post_nord.http_client or define Buzz\Client\BuzzClientInterface service to be used by default');
+                throw new Exception('You should specify setono_post_nord.http_client configuration parameter or define Buzz\Client\BuzzClientInterface service to be used by default');
             }
             $container->setAlias(self::HTTP_CLIENT_SERVICE_ID, BuzzClientInterface::class);
         }
