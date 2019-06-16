@@ -43,11 +43,11 @@ final class RegisterFactoriesPass implements CompilerPassInterface
             $container->setAlias($service, self::PSR17_FACTORY_SERVICE_ID);
         } else {
             throw new Exception(sprintf(
-                'You should specify %s configuration parameter or define one of next services to be used by default:',
+                'You should specify %s configuration parameter or define one of next services to be used by default: %s',
                 $parameter,
-                explode(', ', [
+                implode(', ', [
                     'nyholm.psr7.psr17_factory',
-                    Psr17Factory::class
+                    Psr17Factory::class,
                 ])
             ));
         }
