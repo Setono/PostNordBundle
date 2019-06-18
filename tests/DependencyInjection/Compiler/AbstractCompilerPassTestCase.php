@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * Same as Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase,
  * but without compilation_should_not_fail_with_empty_container test as we want
- * service container to throw exception if required services not defined
+ * service container to throw exception if required services not defined.
  */
 abstract class AbstractCompilerPassTestCase extends AbstractContainerBuilderTestCase
 {
