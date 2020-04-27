@@ -18,7 +18,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.3",
-        "korbeil/phpstan-generic-rules": "^0.2.2",
+        "korbeil/phpstan-generic-rules": "^0.2.4",
         "kriswallsmith/buzz": "^1.1",
         "matthiasnoback/symfony-config-test": "^4.1",
         "matthiasnoback/symfony-dependency-injection-test": "^4.1",
