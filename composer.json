@@ -25,11 +25,12 @@
         "nyholm/psr7": "^1.1",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.12.19",
-        "phpstan/phpstan-strict-rules": "^0.12",
-        "phpstan/phpstan-webmozart-assert": "^0.12",
+        "phpstan/phpstan-strict-rules": "^0.12.2",
+        "phpstan/phpstan-webmozart-assert": "^0.12.3",
         "phpunit/phpunit": "^8.5",
         "roave/security-advisories": "dev-master",
         "sylius-labs/coding-standard": "^3.1",
+        "symplify/coding-standard": "^7.1",
         "thecodingmachine/phpstan-safe-rule": "^1.0"
     },
     "config": {
