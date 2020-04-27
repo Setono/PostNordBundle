@@ -12,6 +12,7 @@ use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 final class RegisterHttpClientPass implements CompilerPassInterface
 {
     private const HTTP_CLIENT_PARAMETER = 'setono_post_nord.http_client';
+
     private const HTTP_CLIENT_SERVICE_ID = 'setono_post_nord.http_client';
 
     public function process(ContainerBuilder $container): void

@@ -19,7 +19,7 @@ final class SetonoPostNordExtension extends Extension
     public function load(array $config, ContainerBuilder $container): void
     {
         $config = $this->processConfiguration($this->getConfiguration([], $container), $config);
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 
         $container->setParameter('setono_post_nord.api_key', $config['api_key']);
         $container->setParameter('setono_post_nord.base_url', $config['base_url']);
