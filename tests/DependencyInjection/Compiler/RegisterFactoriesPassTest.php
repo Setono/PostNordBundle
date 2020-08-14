@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Setono\PostNordBundle\DependencyInjection\Compiler;
 
-use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
 use Psr\Http\Message\RequestFactoryInterface;
 use Setono\PostNordBundle\DependencyInjection\Compiler\RegisterFactoriesPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
